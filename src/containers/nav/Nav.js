@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -9,17 +9,20 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import {mainListItems, secondaryListItems} from './listItems';
-import Icon from "@material-ui/core/Icon";
+import Icon from '@material-ui/core/Icon';
 import { useHistory } from 'react-router-dom';
-import {AccountCircle, Notifications} from "@material-ui/icons";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import {useDispatch} from "react-redux";
-import {destroySession} from "../../session/sessionSlice";
+import { AccountCircle } from '@material-ui/icons';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { useDispatch } from 'react-redux';
+import { destroySession } from '../session/sessionSlice';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon/ListItemIcon';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import ListItemText from '@material-ui/core/ListItemText/ListItemText';
 
 const drawerWidth = 240;
 
@@ -102,11 +105,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function NavBar(props) {
+export function Nav(props) {
   const dispatch = useDispatch();
   const classes = useStyles();
   const history = useHistory();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const openNav = Boolean(anchorEl);
 
@@ -117,7 +120,7 @@ export function NavBar(props) {
     setOpen(false);
   };
   const handleHome = () => {
-    history.push('/home');
+    history.push('/');
   };
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -126,7 +129,13 @@ export function NavBar(props) {
     setAnchorEl(null);
   };
   const handleLogout = () => {
-    dispatch(destroySession())
+    dispatch(destroySession());
+  };
+  const handleDashboardRedirect = () => {
+    history.push('/dashboard');
+  };
+  const handleProfileRedirect = () => {
+    history.push('/profile');
   };
 
 
@@ -151,38 +160,31 @@ export function NavBar(props) {
             Hurrah! Monitor
           </Typography>
           <section>
-          <IconButton
-            color="inherit"
-          >
-              <Badge badgeContent={0} color="secondary">
-                <Notifications />
-              </Badge>
+            <IconButton
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleMenu}
+              color="inherit"
+            >
+              <AccountCircle/>
             </IconButton>
-          <IconButton
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleMenu}
-            color="inherit"
-          >
-            <AccountCircle />
-          </IconButton>
-          <Menu
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            open={openNav}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleLogout}>Logout</MenuItem>
-          </Menu>
-        </section>
+            <Menu
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={openNav}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            </Menu>
+          </section>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -198,12 +200,23 @@ export function NavBar(props) {
           </IconButton>
         </div>
         <Divider/>
-        <List>{mainListItems}</List>
-        <Divider/>
-        <List>{secondaryListItems}</List>
+        <List>
+          <ListItem button onClick={handleProfileRedirect}>
+            <ListItemIcon>
+              <AssignmentIndIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Profile"/>
+          </ListItem>
+          <ListItem button onClick={handleDashboardRedirect}>
+            <ListItemIcon>
+              <DashboardIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Dashboard"/>
+          </ListItem>
+        </List>
       </Drawer>
       <main>
-        <div className={classes.appBarSpacer} />
+        <div className={classes.appBarSpacer}/>
         {props.children}
       </main>
     </div>
