@@ -106,7 +106,7 @@ export function NavBar(props) {
   const dispatch = useDispatch();
   const classes = useStyles();
   const history = useHistory();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const openNav = Boolean(anchorEl);
 
@@ -152,13 +152,6 @@ export function NavBar(props) {
           </Typography>
           <section>
           <IconButton
-            color="inherit"
-          >
-              <Badge badgeContent={0} color="secondary">
-                <Notifications />
-              </Badge>
-            </IconButton>
-          <IconButton
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleMenu}
@@ -199,8 +192,6 @@ export function NavBar(props) {
         </div>
         <Divider/>
         <List>{mainListItems}</List>
-        <Divider/>
-        <List>{secondaryListItems}</List>
       </Drawer>
       <main>
         <div className={classes.appBarSpacer} />

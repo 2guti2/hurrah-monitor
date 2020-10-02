@@ -1,7 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import client from '../../controllers/HttpClient'
-
-const localStorageSessionKey = 'session';
+import client, { localStorageSessionKey } from '../../controllers/HttpClient'
 
 export const sessionSlice = createSlice({
   name: 'session',
@@ -22,8 +20,8 @@ export const sessionSlice = createSlice({
 
 export const { login, destroySession } = sessionSlice.actions;
 
-export const initSession = () => dispatch => {
-  client.post(`/api/sessions`, {username: 'admin', password: 'Passw0rd!'}).then(res => {
+export const initSession = (username, password) => dispatch => {
+  client.post(`/api/sessions`, {username, password}).then(res => {
     const user = {
       token: res.data.token,
       name: 'admin'

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+import HostLoad from './HostLoad';
+import ServiceReports from './ServiceReports';
+import Title from './Title';
+import { Divider } from '@material-ui/core';
+import client from '../../controllers/HttpClient';
 
 const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
@@ -28,29 +30,42 @@ const useStyles = makeStyles((theme) => ({
 export function Dashboard() {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const [hosts, setHosts] = useState([]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      client.get(`/api/hosts`)
+        .then(res => {
+          setHosts(res.data);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }, 500);
+  }, []);
 
   return (
-    <Container maxWidth="lg" className={classes.container}>
-      <Grid container spacing={3}>
-        {/* Chart */}
-        <Grid item xs={12} md={8} lg={9}>
-          <Paper className={fixedHeightPaper}>
-            <Chart/>
-          </Paper>
-        </Grid>
-        {/* Recent Deposits */}
-        <Grid item xs={12} md={4} lg={3}>
-          <Paper className={fixedHeightPaper}>
-            <Deposits/>
-          </Paper>
-        </Grid>
-        {/* Recent Orders */}
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <Orders/>
-          </Paper>
-        </Grid>
-      </Grid>
-    </Container>
+    <div>
+      {hosts.map((host, index) =>
+        <div key={host.id}>
+          <Container maxWidth="lg" className={classes.container}>
+            <Title>Host {host.name}</Title>
+            <Grid container spacing={3}>
+              <Grid item xs={12}>
+                <Paper className={fixedHeightPaper}>
+                  <HostLoad host={host}/>
+                </Paper>
+              </Grid>
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                  <ServiceReports host={host}/>
+                </Paper>
+              </Grid>
+            </Grid>
+          </Container>
+          {index !== hosts.length - 1 && <Divider/>}
+        </div>
+      )}
+    </div>
   );
 }

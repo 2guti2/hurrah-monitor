@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43eed543-4a6b-4a88-ab20-c08fb9cd0c19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env-cmdrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.env-cmdrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/HttpClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HttpClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/common/navBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/common/navBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/common/navBar/listItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/common/navBar/listItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/HostLoad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/Orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/ServiceReports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/session/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/session/SignIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/session/sessionSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/session/sessionSlice.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,6 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601646784639</updated>
-      <workItem from="1601646787125" duration="1408000" />
+      <workItem from="1601646787125" duration="12081000" />
     </task>
     <servers />
   </component>

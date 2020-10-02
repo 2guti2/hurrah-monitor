@@ -1,9 +1,15 @@
 import axios from 'axios';
 
+export const localStorageSessionKey = 'session';
+const session = JSON.parse(localStorage.getItem(localStorageSessionKey));
+
 const client = axios.create({
   baseURL: process.env.REACT_APP_API,
   timeout: 100000,
-  headers: { 'content-type': 'application/json' },
+  headers: {
+    'content-type': 'application/json' ,
+    'Authorization': session ? session.token : ''
+  },
 });
 
 // Custom middleware for requests (this one just logs the error).
