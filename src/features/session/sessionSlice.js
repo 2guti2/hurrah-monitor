@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import client from '../../controllers/HttpClient'
 
 const localStorageSessionKey = 'session';
 
@@ -23,14 +23,14 @@ export const sessionSlice = createSlice({
 export const { login, destroySession } = sessionSlice.actions;
 
 export const initSession = () => dispatch => {
-  axios.post(`${process.env.REACT_APP_API}/api/sessions`, {username: 'admin', password: 'Passw0rd!'}).then(res => {
+  client.post(`/api/sessions`, {username: 'admin', password: 'Passw0rd!'}).then(res => {
     const user = {
       token: res.data.token,
       name: 'admin'
     };
     localStorage.setItem(localStorageSessionKey, JSON.stringify(user));
     dispatch(login(user))
-  })
+  });
 };
 
 export const selectSession = state => state.session;
