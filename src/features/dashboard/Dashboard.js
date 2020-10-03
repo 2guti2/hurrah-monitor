@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -8,7 +8,8 @@ import HostLoad from './HostLoad';
 import ServiceReports from './ServiceReports';
 import Title from './Title';
 import { Divider } from '@material-ui/core';
-import client from '../../controllers/HttpClient';
+import { getHosts, selectHosts } from './hostsSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
@@ -29,24 +30,17 @@ const useStyles = makeStyles((theme) => ({
 
 export function Dashboard() {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-  const [hosts, setHosts] = useState([]);
+  const {hosts} = useSelector(selectHosts);
 
   useEffect(() => {
-    setTimeout(() => {
-      client.get(`/api/hosts`)
-        .then(res => {
-          setHosts(res.data);
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }, 500);
+    dispatch(getHosts(undefined));
   }, []);
 
   return (
     <div>
-      {hosts.map((host, index) =>
+      {hosts && hosts.length && hosts.map((host, index) =>
         <div key={host.id}>
           <Container maxWidth="lg" className={classes.container}>
             <Title>Host {host.name}</Title>

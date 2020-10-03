@@ -34,7 +34,7 @@ export const sessionSlice = createSlice({
   }
 });
 
-export const { destroySession } = sessionSlice.actions;
+export const {destroySession} = sessionSlice.actions;
 
 export const selectSession = state => state.session;
 
