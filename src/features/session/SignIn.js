@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {useDispatch, useSelector} from "react-redux";
 import {
-  initSession, selectSession,
+  initSession, initSessionAsync, selectSession,
 } from './sessionSlice';
 import {Redirect} from "react-router-dom";
 
@@ -41,7 +41,7 @@ export function SignIn() {
   const dispatch = useDispatch();
   const onLogin = (event) => {
     event.preventDefault();
-    dispatch(initSession(username, password));
+    dispatch(initSessionAsync({username, password}));
   };
 
   if (user)
