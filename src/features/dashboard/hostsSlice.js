@@ -16,7 +16,9 @@ export const getHosts = createAsyncThunk(
 
 export const hostsSlice = createSlice({
   name: 'hosts',
-  initialState: {hosts: []},
+  initialState: {
+    hosts: []
+  },
   reducers: {},
   extraReducers: {
     [getHosts.fulfilled]: (state, action) => {

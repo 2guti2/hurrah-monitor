@@ -2,23 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
-import client from '../../controllers/HttpClient';
 import CartesianGrid from 'recharts/lib/cartesian/CartesianGrid';
 import Tooltip from 'recharts/lib/component/Tooltip';
+import { useDispatch, useSelector } from 'react-redux';
+import { getHostLoad, selectLoads } from './loadSlice';
 
 export default function HostLoad({ host }) {
   const theme = useTheme();
+  const dispatch = useDispatch();
   const [data, setData] = useState([]);
+  const {loads} = useSelector(selectLoads);
 
   useEffect(() => {
-    client.get(`/api/hosts/${host.id}/load`)
-      .then(res => {
-        setData(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    dispatch(getHostLoad(host.id));
   }, []);
+
+  useEffect(() => {
+    const loadForThisHost = loads.find(l => l.hostId === host.id);
+    if (loadForThisHost)
+      setData(loadForThisHost.loads);
+  });
 
   return (
     <React.Fragment>

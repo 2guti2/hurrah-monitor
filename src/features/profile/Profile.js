@@ -5,7 +5,6 @@ import { selectSession } from "../session/sessionSlice";
 
 export function Profile() {
   const user = useSelector(selectSession);
-  console.log(user);
   return (
     <div>
       <div className={styles.row}>
