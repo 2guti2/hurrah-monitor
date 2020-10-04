@@ -4,12 +4,12 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Title from './Title';
-import client from '../../controllers/HttpClient';
+import Title from '../../../components/title/Title';
+import client from '../../../controllers/HttpClient';
 import { useDispatch } from 'react-redux';
 
 export default function ServiceReports({host}) {
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [status, setStatus] = useState([]);
 
   useEffect(() => {

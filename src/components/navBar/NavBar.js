@@ -19,7 +19,7 @@ import {AccountCircle, Notifications} from "@material-ui/icons";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import {useDispatch} from "react-redux";
-import {destroySession} from "../../session/sessionSlice";
+import {destroySession} from "../../containers/session/sessionSlice";
 
 const drawerWidth = 240;
 

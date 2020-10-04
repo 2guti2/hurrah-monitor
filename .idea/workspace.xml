@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43eed543-4a6b-4a88-ab20-c08fb9cd0c19" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/dashboard/Deposits.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/dashboard/HostLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/HostLoad.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/dashboard/ServiceReports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/ServiceReports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/dashboard/hostSlice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/dashboard/hostsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/hostsSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/Profile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601646784639</updated>
       <workItem from="1601646787125" duration="12561000" />
-      <workItem from="1601731652778" duration="13141000" />
+      <workItem from="1601731652778" duration="13366000" />
     </task>
     <servers />
   </component>

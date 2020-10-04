@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home } from './features/home/Home'
+import { Home } from './containers/home/Home'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -7,8 +7,8 @@ import {
   Route,
 } from 'react-router-dom';
 import {PrivateRoute} from "./PrivateRoute";
-import {Profile} from "./features/profile/Profile";
-import {SignIn} from "./features/session/SignIn";
+import {Profile} from "./containers/profile/Profile";
+import {SignIn} from "./containers/session/SignIn";
 
 function App() {
   return (

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Redirect, Route } from 'react-router-dom'
 import {useSelector} from "react-redux";
-import {selectSession} from "./features/session/sessionSlice";
-import {NavBar} from "./features/common/navBar/NavBar";
+import {selectSession} from "./containers/session/sessionSlice";
+import {NavBar} from "./components/navBar/NavBar";
 
 export function PrivateRoute({ component: Component, ...rest }) {
   const user = useSelector(selectSession);
