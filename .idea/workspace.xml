@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43eed543-4a6b-4a88-ab20-c08fb9cd0c19" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/features/dashboard/ServiceReports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/ServiceReports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/hostsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/hostsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/loads/loadSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/loads/loadSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/reports/ServiceReports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/reports/ServiceReports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/reports/reportsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/reports/reportsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionNames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionNames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +34,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/features/common/title" />
+      <recent name="$PROJECT_DIR$/src/features/dashboard/reports" />
+      <recent name="$PROJECT_DIR$/src/features/dashboard/Loads" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -50,7 +65,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601646784639</updated>
       <workItem from="1601646787125" duration="12561000" />
-      <workItem from="1601731652778" duration="13366000" />
+      <workItem from="1601731652778" duration="16209000" />
+      <workItem from="1601836071647" duration="532000" />
     </task>
     <servers />
   </component>

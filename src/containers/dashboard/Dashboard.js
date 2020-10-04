@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import HostLoad from './loads/HostLoad';
 import ServiceReports from './reports/ServiceReports';
-import Title from '../../components/title/Title';
+import Title from 'components/title/Title';
 import { Divider } from '@material-ui/core';
 import { getHosts, selectHosts } from './hostsSlice';
 import { useDispatch, useSelector } from 'react-redux';

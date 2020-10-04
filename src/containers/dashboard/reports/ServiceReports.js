@@ -4,24 +4,24 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Title from '../../../components/title/Title';
-import client from '../../../controllers/HttpClient';
-import { useDispatch } from 'react-redux';
+import Title from 'components/title/Title';
+import { useDispatch, useSelector } from 'react-redux';
+import { getServiceReports, selectReports } from './reportsSlice';
 
 export default function ServiceReports({host}) {
   const dispatch = useDispatch();
+  const {reports} = useSelector(selectReports);
   const [status, setStatus] = useState([]);
 
   useEffect(() => {
-    client.get(`/api/last_status?hostId=${host.id}`)
-      .then(res => {
-        setStatus(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    dispatch(getServiceReports(host.id));
   }, []);
 
+  useEffect(() => {
+    const reportForThisHost = reports.find(l => l.hostId === host.id);
+    if (reportForThisHost)
+      setStatus(reportForThisHost);
+  });
 
   return (
     <React.Fragment>

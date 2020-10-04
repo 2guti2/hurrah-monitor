@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import client from '../../controllers/HttpClient'
+import { hosts } from '../../store/actionNames';
 
 const queryApiForHosts = () => {
   return new Promise(resolve => {
@@ -8,14 +9,14 @@ const queryApiForHosts = () => {
 };
 
 export const getHosts = createAsyncThunk(
-  'hosts/get',
+  hosts.actions.get,
   async () => {
     return await queryApiForHosts();
   }
 );
 
 export const hostsSlice = createSlice({
-  name: 'hosts',
+  name: hosts.name,
   initialState: {
     hosts: []
   },
