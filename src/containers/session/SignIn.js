@@ -45,7 +45,7 @@ export function SignIn() {
   };
 
   if (user)
-    return <Redirect to={'/home'}/>;
+    return <Redirect to={'/'}/>;
   else {
     return (
       <Container component="main" maxWidth="xs">

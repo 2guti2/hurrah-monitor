@@ -1,5 +1,4 @@
 import React from 'react';
-import { Home } from './containers/home/Home'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -9,6 +8,7 @@ import {
 import {PrivateRoute} from "./PrivateRoute";
 import {Profile} from "./containers/profile/Profile";
 import {SignIn} from "./containers/session/SignIn";
+import { Dashboard } from './containers/dashboard/Dashboard';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route path="/login" component={SignIn} />
           <PrivateRoute path="/profile" component={Profile} />
-          <PrivateRoute path="/" component={Home} />
+          <PrivateRoute path="/" component={Dashboard} />
         </Switch>
       </div>
     </Router>
