@@ -15,13 +15,13 @@ export default function HostLoad({ host }) {
 
   useEffect(() => {
     dispatch(getHostLoad(host.id));
-  }, []);
+  }, [dispatch, host.id]);
 
   useEffect(() => {
     const loadForThisHost = loads.find(l => l.hostId === host.id);
     if (loadForThisHost)
       setData(loadForThisHost.loads);
-  });
+  }, [loads, host.id]);
 
   return (
     <React.Fragment>

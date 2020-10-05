@@ -15,13 +15,13 @@ export default function ServiceReports({host}) {
 
   useEffect(() => {
     dispatch(getServiceReports(host.id));
-  }, []);
+  }, [dispatch, host.id]);
 
   useEffect(() => {
     const reportForThisHost = reports.find(l => l.hostId === host.id);
     if (reportForThisHost)
       setStatus(reportForThisHost);
-  });
+  }, [reports, host.id]);
 
   return (
     <React.Fragment>

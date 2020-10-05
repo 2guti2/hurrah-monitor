@@ -36,7 +36,7 @@ export function Dashboard() {
 
   useEffect(() => {
     dispatch(getHosts(undefined));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
