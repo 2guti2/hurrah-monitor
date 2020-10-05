@@ -12,8 +12,6 @@
     "axios": "^0.20.0",
     "clsx": "latest",
     "env-cmd": "^10.1.0",
-    "eslint": "^7.10.0",
-    "eslint-plugin-react": "^7.21.3",
     "prop-types": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

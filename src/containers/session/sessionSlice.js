@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import client, { localStorageSessionKey } from '../../controllers/HttpClient'
+import client, { localStorageSessionKey } from '../../controllers/HttpClient';
 
 const queryApiForLogin = user => {
   return new Promise(resolve => {
     client.post('/api/sessions', user).then(res => resolve(res));
-  })
+  });
 };
 
 export const initSessionAsync = createAsyncThunk(

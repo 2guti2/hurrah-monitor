@@ -5,9 +5,9 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { PrivateRoute } from "./PrivateRoute";
-import { Profile } from "./containers/profile/Profile";
-import { SignIn } from "./containers/session/SignIn";
+import { PrivateRoute } from './PrivateRoute';
+import { Profile } from './containers/profile/Profile';
+import { SignIn } from './containers/session/SignIn';
 import { Dashboard } from './containers/dashboard/Dashboard';
 
 function App() {

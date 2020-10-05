@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import client from '../../../controllers/HttpClient'
+import client from '../../../controllers/HttpClient';
 import {loads} from '../../../store/actions';
 
 const queryApiForHostLoad = (hostId) => {

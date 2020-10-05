@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import client from '../../controllers/HttpClient'
+import client from '../../controllers/HttpClient';
 import { hosts } from '../../store/actions';
 
 const queryApiForHosts = () => {
@@ -26,7 +26,7 @@ export const hostsSlice = createSlice({
       return {
         ...state,
         hosts: action.payload
-      }
+      };
     }
   }
 });

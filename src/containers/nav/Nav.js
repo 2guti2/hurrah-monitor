@@ -11,13 +11,13 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import Icon from "@material-ui/core/Icon";
+import Icon from '@material-ui/core/Icon';
 import { useHistory } from 'react-router-dom';
-import { AccountCircle } from "@material-ui/icons";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import { useDispatch } from "react-redux";
-import { destroySession } from "../session/sessionSlice";
+import { AccountCircle } from '@material-ui/icons';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { useDispatch } from 'react-redux';
+import { destroySession } from '../session/sessionSlice';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon/ListItemIcon';
 import DashboardIcon from '@material-ui/icons/Dashboard';
@@ -129,7 +129,7 @@ export function Nav(props) {
     setAnchorEl(null);
   };
   const handleLogout = () => {
-    dispatch(destroySession())
+    dispatch(destroySession());
   };
   const handleDashboardRedirect = () => {
     history.push('/dashboard');

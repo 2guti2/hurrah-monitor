@@ -7,9 +7,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector} from 'react-redux';
 import { initSessionAsync, selectSession } from './sessionSlice';
-import {Redirect} from "react-router-dom";
+import {Redirect} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -93,6 +93,6 @@ export function SignIn() {
           </form>
         </div>
       </Container>
-    )
+    );
   }
 }

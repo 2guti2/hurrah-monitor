@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43eed543-4a6b-4a88-ab20-c08fb9cd0c19" name="Default Changelist" comment="" />
+    <list default="true" id="43eed543-4a6b-4a88-ab20-c08fb9cd0c19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivateRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/hostsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/hostsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/loads/loadSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/loads/loadSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/session/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/session/SignIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/session/sessionSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/session/sessionSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +72,7 @@
       <workItem from="1601646787125" duration="12561000" />
       <workItem from="1601731652778" duration="16209000" />
       <workItem from="1601836071647" duration="1946000" />
-      <workItem from="1601841800855" duration="2294000" />
+      <workItem from="1601841800855" duration="2981000" />
     </task>
     <servers />
   </component>
