@@ -7,7 +7,6 @@ const queryApiForLogin = user => {
   })
 };
 
-// doc https://redux-toolkit.js.org/api/createAsyncThunk
 export const initSessionAsync = createAsyncThunk(
   'session/initSessionAsync',
   async (user, thunkAPI) => {

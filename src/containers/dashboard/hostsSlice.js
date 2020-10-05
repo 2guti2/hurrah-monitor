@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import client from '../../controllers/HttpClient'
-import { hosts } from '../../store/actionNames';
+import { hosts } from '../../store/actions';
 
 const queryApiForHosts = () => {
   return new Promise(resolve => {

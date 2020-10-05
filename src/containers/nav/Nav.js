@@ -17,7 +17,7 @@ import { AccountCircle } from "@material-ui/icons";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { useDispatch } from "react-redux";
-import { destroySession } from "../../containers/session/sessionSlice";
+import { destroySession } from "../session/sessionSlice";
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon/ListItemIcon';
 import DashboardIcon from '@material-ui/icons/Dashboard';
@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function NavBar(props) {
+export function Nav(props) {
   const dispatch = useDispatch();
   const classes = useStyles();
   const history = useHistory();

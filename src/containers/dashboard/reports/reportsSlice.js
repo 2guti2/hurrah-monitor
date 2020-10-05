@@ -1,6 +1,6 @@
 import client from '../../../controllers/HttpClient';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import {reports} from '../../../store/actionNames';
+import {reports} from '../../../store/actions';
 
 const queryApiForServiceReports = (hostId) => {
   return new Promise(resolve => {
